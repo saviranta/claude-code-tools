@@ -62,6 +62,8 @@ MEMORY.md
 memory/*.md
 !memory/MEMORY.template.md
 !memory/example-topic.md
+# Allow skill definition files named memory.md inside commands/ folders
+!**/commands/memory.md
 
 # Session logs and history
 sessions/
