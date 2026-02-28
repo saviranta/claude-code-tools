@@ -1,0 +1,82 @@
+{
+  "domain": "example-realestate.com",
+  "analyzed_at": "2026-02-28T14:32:00",
+  "description": "Single apartment listing page with price, specs, address, and description",
+  "content": {
+    "main_selector": "main.listing-detail",
+    "present_indicators": [
+      "Asking price",
+      "Square metres",
+      "Year built"
+    ],
+    "removed_indicators": [
+      "listing.*removed",
+      "page not found",
+      "no longer available",
+      "404"
+    ]
+  },
+  "boilerplate": {
+    "exclude_selectors": [
+      "header",
+      "nav",
+      "footer",
+      "[class*='cookie']",
+      "[class*='consent']",
+      "[class*='agent-contact']",
+      "[class*='similar-listings']",
+      "[class*='advertisement']",
+      "[id='map']",
+      "aside"
+    ]
+  },
+  "fields": {
+    "price": {
+      "description": "Asking price in euros",
+      "selector": "[data-testid='asking-price'], .price-primary",
+      "type": "text"
+    },
+    "maintenance_charge": {
+      "description": "Monthly maintenance charge",
+      "selector": "[data-testid='maintenance-charge'], .price-secondary",
+      "type": "text"
+    },
+    "size_m2": {
+      "description": "Apartment size in square metres",
+      "selector": "[data-label='Size'], .spec-size",
+      "type": "text"
+    },
+    "rooms": {
+      "description": "Number of rooms",
+      "selector": "[data-label='Rooms'], .spec-rooms",
+      "type": "text"
+    },
+    "floor": {
+      "description": "Floor number",
+      "selector": "[data-label='Floor'], .spec-floor",
+      "type": "text"
+    },
+    "year_built": {
+      "description": "Year the building was constructed",
+      "selector": "[data-label='Year built'], .spec-year",
+      "type": "text"
+    },
+    "address": {
+      "description": "Full street address",
+      "selector": "h1.listing-address, [data-testid='address']",
+      "type": "text"
+    },
+    "neighbourhood": {
+      "description": "Neighbourhood or district name",
+      "selector": ".listing-location, [data-testid='neighbourhood']",
+      "type": "text"
+    },
+    "description": {
+      "description": "Main listing description text",
+      "selector": ".listing-description, [data-testid='description']",
+      "type": "html"
+    }
+  },
+  "scope_mode": "selective",
+  "notes": "Page uses data-testid attributes on newer elements and class-based selectors on older ones. Both are included as fallbacks. The map widget loads asynchronously and can be safely ignored."
+}
