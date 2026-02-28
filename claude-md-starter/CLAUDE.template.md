@@ -79,7 +79,6 @@ Config location is typically ~/.claude.json
 
 | Server | Purpose |
 |--------|---------|
-| Gmail | Inbox access |
 | GitHub | GitHub API integration |
 
 ## Token Quota Management
