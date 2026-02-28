@@ -2,20 +2,20 @@
 
 ## What kind of page are you scraping?
 
-A real estate listing page showing a single apartment for sale.
-Each page represents one property with its details, photos, and agent info.
+A product page on a snowboard webshop showing a single snowboard for sale.
+Each page represents one product with its specs, pricing, and availability.
 
 ## What do you want to capture?
 
-The asking price, monthly maintenance charge, apartment size in square metres,
-number of rooms, floor number, year the building was built, full street address,
-neighbourhood, and the main listing description text.
+The product name, brand, price, any sale or original price if discounted,
+available sizes, flex rating, terrain type (freestyle/freeride/all-mountain),
+product description, and whether the item is in stock.
 
 ## What should be ignored?
 
-The site header and top navigation, footer with links and legal text,
-cookie consent banner, sidebar with agent contact form, the map widget,
-"similar listings" section at the bottom, and any advertisement banners.
+The site header and navigation, footer with links and legal text,
+cookie consent banner, "customers also bought" recommendations,
+social media share buttons, and any promotional banners or ads.
 
 ## How much of the page?
 
