@@ -1,0 +1,158 @@
+# =========================
+# claude-code-tools .gitignore
+# Claude Code tools, patterns, and configurations
+# Strict: no credentials, no personal data, no collected data
+# =========================
+
+# ----- Credentials & Secrets -----
+.env
+.env.*
+!.env.example
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+secrets/
+credentials/
+*api_key*
+*apikey*
+*access_token*
+*secret_key*
+service_account*.json
+*_credentials.json
+*_secret*.json
+auth_token*
+token.json
+oauth*.json
+config.local.*
+.netrc
+.htpasswd
+
+# Claude Code auth & cache (never commit)
+mcp-auth*
+mcp-needs-auth*
+mcp-*.json
+stats-cache.json
+history.jsonl
+*.lock
+settings.local.json
+
+# Provider keys
+.openai
+.anthropic
+.gemini
+
+# ----- Personal & Persona Data -----
+# Tools live here; personal configuration does not
+personal/
+persona/
+private/
+*_personal.*
+*_private.*
+
+# Personal CLAUDE.md instances (only templates/starters belong here)
+CLAUDE.local.md
+.claude/CLAUDE.md
+
+# Personal memory files (only the memory system pattern, not your actual memory)
+MEMORY.md
+memory/*.md
+!memory/MEMORY.template.md
+!memory/example-topic.md
+
+# Session logs and history
+sessions/
+*.jsonl
+*.session
+
+# Personal images and photos
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+!docs/**/*.png
+!docs/**/*.jpg
+!examples/**/*.png
+
+# ----- Collected & Proprietary Data -----
+# No scraped, purchased, or collected data in this repo
+*.db
+*.sqlite
+*.sqlite3
+data/raw/
+data/collected/
+data/scraped/
+data/personal/
+data/listings/
+*.csv
+*.parquet
+*.feather
+*.pkl
+*.pickle
+db_config*
+database.yml
+database.yaml
+*_dump.sql
+*.backup
+
+# Scraped HTML cache
+html_cache/
+page_cache/
+*.html_cache
+
+# ----- OS & Editor -----
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+.idea/
+.vscode/settings.json
+.vscode/launch.json
+*.swp
+*.swo
+*~
+
+# ----- Dependencies -----
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ----- Build & Cache -----
+dist/
+build/
+.next/
+.nuxt/
+*.log
+.cache/
+.langchain/
+__llm_cache__/
+tmp/
+temp/
+scratch/
+playwright-report/
+test-results/
+
+# ----- LLM Artifacts -----
+*.bin
+*.gguf
+*.safetensors
+*.onnx
+models/
+checkpoints/
+*.faiss
+chroma_db/
+vector_store/
